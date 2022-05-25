@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200,300,400,500,600,700,800,900&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* Navbar CSS */
+
+nav{
+  background-color: #162239f2;
+  font-family: 16px sans-serif;
+  color: #212529;
+}
+.nav-item a{
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 4px 14px;
+}
+.nav-item a:hover{
+  color: #fff;
+}
+.nav-item a::before{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f5a425;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.nav-item a:hover::before{
+  transform: scaleX(1);
+}
+.dropdown-menu{
+  background-color: #162239f2;
+  opacity: 0.90;
+}
+
+
+/* Banner CSS */
+
+section{
+  position: relative;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* Banner bg-video CSS */
+
+section video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+section .container {
+  position: relative;
+  z-index: 2;
+}
+section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+
+/* conversion dropdown */
+
+select{
+  margin-left: 90px;
+}
+
+
+/* convertion btns CSS */
+
+.cbtn{
+  background-color: #162239f2;
+  color: #f5a425;
+  border-radius: 45px;
+  cursor: pointer;
+  border: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.cbtn:hover{
+  background: #f5a425;
+  transform: translateY(-7px);
+  color: #162239f2;
+  box-shadow: 0px 10px 25px rgba(245, 221, 3, 0.705);
+}
+
+
+/* modal btns CSS */
+
+.mdbtn{
+  background-color: #162239f2;
+  color: #f5a425;
+  border-radius: 45px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.mdbtn:hover{
+  background: #f5a425;
+  transform: translateY(-7px);
+  color: #162239f2;
+  box-shadow: 0px 10px 25px rgba(245, 221, 3, 0.705);
+}
+.col-6 a{
+  color: #f5a425;
+}
+
+
+/* feedback btn CSS */
+
+.fdbtn{
+  color: #f5a425;
+  border-radius: 45px;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.fdbtn:hover{
+  background: #f5a425;
+  transform: translateY(-7px);
+  color: #162239f2;
+  box-shadow: 0px 10px 25px rgba(245, 221, 3, 0.705);
+}
+.form-control{
+  padding: 10px;
+  font-size: 1.1em;
+}
+
+
+/* footer links CSS */
+
+.hov{
+  position: relative;
+  color: #fff;
+}
+.hov:hover{
+  color: #fff;
+}
+.hov::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f5a425;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.hov:hover::before{
+  transform: scaleX(1);
+}
+
+
+/* footer social icons CSS */
+
+.btn-floating{
+  display: inline-block;
+  background: #162239f2;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #f5a425;
+  overflow: hidden;
+  position: relative;
+}
+.btn-floating i{
+  transition: 0.2s linear;
+}
+.btn-floating:hover i{
+  transform: scale(1.3);
+  color: #162239f2;
+}
+.btn-floating::before{
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #f5a425;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.btn-floating:hover::before{
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+@keyframes aaa{
+ 0%{
+    left: -110%;
+    top: 90%;
+ }50%{
+    left: 10%;
+    top: -30%;
+ }100%{
+   top: -10%;
+   left: -10%;
+ }
+}
+
+
+/* Contact Form CSS */
+
+.contactUs{
+  background: linear-gradient(90deg,#f5a425 0%, #f5a425 30%, #162239f2 30%, #162239f2 100%);
+  position: relative;
+  width: 100%;
+  padding: 40px 100px;
+}
+.contactUs .title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+.contactUs .title h2{
+  color: #fff;
+  font-weight: 500;
+}
+.form{
+  grid-area: form;
+}
+.info{
+  grid-area: info;
+}
+.map{
+  grid-area: map;
+}
+.contact{
+  padding: 40px;
+  background: #fff;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
+}
+.box{
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 5fr 4fr;
+  grid-template-areas: "form info" "form map";
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+.contact h3{
+  color: #162239f2;
+  font-weight: 500;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+
+/* form */
+.formBox{
+  position: relative;
+  width: 100%;
+}
+.formBox .row50{
+  display: flex;
+  gap: 20px;
+}
+.inputBox{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 50%;
+}
+.formBox .row100 .inputBox{
+  width: 100%;
+}
+.inputBox span{
+  color: #f5a425;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.inputBox input{
+  caret-color: #f5a425;
+  padding: 10px;
+  font-size: 1.1em;
+  outline: none;
+  border: 1px solid #333;
+}
+.inputBox textarea{
+  padding: 10px;
+  font-size: 1.1em;
+  outline: none;
+  border: 1px solid #333;
+  resize: none;
+  min-height: 220px;
+  margin-bottom: 10px;
+}
+.inputBox input[type="submit"]{
+  background: #162239f2;
+  color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 1.1em;
+  max-width: 120px;
+  padding: 14px 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.inputBox input[type="submit"]:hover{
+  background: #f5a425;
+  transform: translateY(-7px);
+  color: #162239f2;
+  box-shadow: 0px 10px 25px rgba(245, 221, 3, 0.705); 
+}
+.inputBox ::placeholder{
+  color: #999;
+}
+
+/* info */
+.info{
+  background: #162239f2;
+}
+.info h3{
+  color: #fff;
+}
+.info .infoBox div{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.info .infoBox div span{
+  min-width: 40px;
+  height: 40px;
+  color: #fff;
+  background: #f5a425;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.info .infoBox div p{
+  color: #fff;
+  font-size: 1.1em;
+}
+.info .infoBox div a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+.sci{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sci li{
+  list-style: none;
+  margin-right: 15px;
+}
+.sci li a{
+  color: #fff;
+  font-size: 2em;
+  color: #ccc;
+}
+.sci li a:hover{
+  color: #fff;
+}
+.map{
+  padding: 0;
+}
+.map iframe{
+  width: 100%;
+  height: 100%;
+}
+
+/* contact form media query */
+
+@media (max-width: 991px){
+  .contactUs{
+    background: #f5a425;
+  }
+  .contactUs{
+    padding: 20px;
+  }
+  .box{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "form"
+      "info"
+      "map";
+  }
+  .formBox .row50{
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+  }
+  .inputBox{
+    width: 100%;
+  }
+  .contact{
+    padding: 30px;
+  }
+  .map{
+    min-height: 300px;
+    padding: 0;
+  }
+}
+
+
+/* Articles page css */
+
+.p-md-5{
+  background: linear-gradient(70deg,#162239f2 0%, #162239f2 55%, #f5a425 30%, #f5a425 100%);
+  border: 3px solid #f5a425;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: 5px;
+  overflow-x: auto;
+  text-align: center;
+  background: none;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+}
+
+.accordion-button{
+  background-color: #f5a425;
+  color: #162239f2;
+  font-size: large;
+}
+
+.card-img-right {
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+}
+
+.position-sticky div{
+  background: #162239f2;
+  border: 3px solid #f5a425;
+}
+
+.flex-auto {
+  flex: 0 0 auto;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+  .h-md-250 { height: 250px; }
+}
+
+/* Blog posts */
+
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #727272;
+}
+main h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+}
+
+/* Currency CSS */
+
+.heading {
+  font-family: 'Pacifico', cursive;
+}
+
+.main {
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  border: 3px solid #f5a425;
+  box-shadow: 0px 10px 25px rgba(245, 221, 3, 0.705);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.form-group input{
+  margin-left: 80px;
+}
+
+
+/* currency field btns CSS */
+
+.crbtn{
+  width: 200px;
+  color: #f5a425;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.crbtn:hover{
+  background: #f5a425;
+  transform: translateY(-7px);
+  color: #162239f2;
+  box-shadow: 0px 10px 25px rgba(245, 221, 3, 0.705);
+}
+
+/* currency output */
+
+#finalAmount {
+  font-family: 'Lobster', cursive;
+  display: none;
+  margin: 50px auto;
+}
+
+.finalValue {
+  font-family: 'Amiri', serif;
+}
+
+@media (max-width: 768px) {
+  hr {
+      width: 60%;
+  }
+  .main {
+      width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .heading {
+      font-size: 60px;
+  }
+  hr {
+      width: 75%;
+  }
+  #finalAmount h2, .finalValue {
+      font-size: 40px;
+  }
+}
