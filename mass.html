@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Metric Conversion - Mass</title>
+</head>
+
+<body>
+    <!------Navbar------>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light fs-1 fw-bold" href="#"><span style="color: #f5a425;"
+                    class="fs-1 fw-bold">METRIC</span>&nbsp;CONVERSION</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none px-4 active text-light fs-6" aria-current="page"
+                            href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-decoration-none px-4 dropdown-toggle text-light fs-6" href="#"
+                            id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Conversions
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark mx-0 border-0 shadow"
+                            aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item d-flex gap-2 align-items-center" href="length.html"><i
+                                        style="color: #f5a425;"
+                                        class="fa-solid fa-ruler-combined"></i>&nbsp;&nbsp;Length Conversion</a></li>
+                            <li><a class="dropdown-item d-flex gap-2 align-items-center" href="area.html"><i
+                                        style="color: #f5a425;" class="fa-solid fa-earth-americas"></i>&nbsp;&nbsp;Area
+                                    Conversion</a></li>
+                            <li><a class="dropdown-item d-flex gap-2 align-items-center" href="volume.html"><i
+                                        style="color: #f5a425;" class="fa-solid fa-flask"></i>&nbsp;&nbsp;Volume
+                                    Conversion</a></li>
+                            <li><a class="dropdown-item d-flex gap-2 align-items-center" href="mass.html"><i
+                                        style="color: #f5a425;" class="fa-solid fa-scale-balanced"></i>&nbsp;&nbsp;Mass
+                                    Conversion</a></li>
+                            <li><a class="dropdown-item d-flex gap-2 align-items-center" href="temperature.html"><i
+                                        style="color: #f5a425;"
+                                        class="fa-solid fa-temperature-low"></i>&nbsp;&nbsp;Temperature Conversion</a>
+                            </li>
+                            <li><a class="dropdown-item d-flex gap-2 align-items-center" href="currency.html"><i
+                                        style="color: #f5a425;"
+                                        class="fa-solid fa-money-bill-1"></i>&nbsp;&nbsp;Currency Conversion</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none px-4 text-light fs-6" href="article.html">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none px-4 text-light fs-6" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!----section1------>
+    <section>
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="videos/bg-video.mp4" type="video/mp4">
+        </video>
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                    <h1 class="display-2 fw-bold"><span style="color: #f5a425;">Metric</span>&nbsp;Conversion</h1>
+                    <p class="lead fw-bold font-monospace">Charts and calculators for metric conversion</p>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-----Section2------->
+    <section style="background: #172238;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="number" style="width: 35vw; line-height: 40px;"
+                        class="form-control text-center fw-bold my-3 ms-1" name="number" placeholder="Input" id="input">
+                </div>
+                <div class="col-md-6" style="display: inline-block;">
+                    <input type="number" style="width: 35vw; line-height: 40px;"
+                        class="form-control text-center fw-bold my-3 ms-1" name="number" placeholder="Output"
+                        id="result" disabled>
+                </div>
+            </div>
+            <!--Dropdown-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <select class="form-select rounded p-2 border border-warning text-center fw-bold w-50"
+                            id="inputType">
+                            <option value="ounce">Ounces</option>
+                            <option value="gram">Grams</option>
+                            <option value="pound">Pounds</option>
+                            <option value="kg">Kilograms</option>
+                            <option value="sh-ton">Short Tons</option>
+                            <option value="mg">Mega Grams or (Metric Tons)</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="col-md-6">
+                        <select class="form-select rounded p-2 border border-warning text-center fw-bold w-50"
+                            id="resultType">
+                            <option value="ounce">Ounces</option>
+                            <option value="gram">Grams</option>
+                            <option value="pound">Pounds</option>
+                            <option value="kg">Kilograms</option>
+                            <option value="sh-ton">Short Tons</option>
+                            <option value="mg">Mega Grams or (Metric Tons)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <button onclick="ounceTOgram()"
+                            class="rounded p-3 text-decoration-none border border-warning text-center fw-bold w-75 ms-4 cbtn"><i
+                                class="fa-solid fa-scale-balanced"></i>&nbsp;Ounces - Grams</button>
+                    </div>
+                    <div class="col-6">
+                        <button onclick="poundTokg()"
+                            class="rounded p-3 text-decoration-none border border-warning text-center fw-bold w-75 ms-5 cbtn"><i
+                                class="fa-solid fa-scale-balanced"></i>&nbsp;Pounds - Kilograms</button>
+                    </div>
+                    <div class="col-6">
+                        <button onclick="shtonTOmg()"
+                            class="rounded p-3 text-decoration-none border border-warning text-center fw-bold w-75 ms-4 cbtn"><i
+                                class="fa-solid fa-scale-balanced"></i>&nbsp;Short tons - Mega grams (or"metric
+                            ton")</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----Section2----->
+    <section style="background: url(images/main-slider-01.png);">
+        <h1 class="fw-bold text-center text-light my-3">History of <span style="color: #f5a425;"
+                class="fw-bold text-center my-3">Mass Units</span></h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/mass.png" alt="" class="img-thumbnail" width="100%" height="auto">
+                </div>
+                <div class="col-md-6">
+                    <p class="text-light text-center">Mass is the quantity of matter in a physical body. It is also
+                        a measure of the body's inertia, the resistance to acceleration (change of velocity) when a net
+                        force is applied. An object's mass also determines the strength of its gravitational
+                        attraction to other bodies.
+
+                        The SI base unit of mass is the kilogram (kg). In physics, mass is not the same as weight, even
+                        though mass is often determined by measuring the object's weight using a spring scale, rather
+                        than balance scale comparing it directly with known masses. An object on the Moon would weigh
+                        less than it does on Earth because of the lower gravity, but it would still have the same mass.
+                        This is because weight is a force, while mass is the property that (along with gravity)
+                        determines the strength of this force. <br>The Metric System of Measurements uses the mass
+                        units: gram (g), kilogram (kg) and tonne (t).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-------Footer ----------->
+    <footer class="text-white pt-5 pb-4" style="background: url(images/footer-bg.png);">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+                <div class="col-md-4 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4" style="color: #f5a425;">Feedback</h5>
+                    <p class="text-wrap">We will be glad to know from you how your experience was. Be sure to tell us
+                        and if there is
+                        complaint, Please contact us.
+                        Click the button below for feedback
+                    </p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn rounded border border-warning fw-bold fdbtn" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Feedback
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content"
+                                style="background: url(images/modal-bg.png) center/cover no-repeat; border: 2px solid #f5a425;">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" style="color: #f5a425;" id="exampleModalLabel">Feedback Form
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" style="text-align: left;">
+                                    <form onsubmit="return modalValidate();">
+                                        <label for="FirstName:" class="col-form-label">First Name</label>
+                                        <br>
+                                        <input type="text" class="form-control" placeholder="Enter First Name"
+                                            id="fnamemd">
+                                        <span class="text-warning" style="font-weight: 200;" id="md1"></span>
+                                </div>
+                                <div class="modal-body" style="text-align: left;">
+                                    <label for="LastName:" class="col-form-label">Last Name</label>
+                                    <br>
+                                    <input type="text" class="form-control" placeholder="Enter Last Name" id="lnamemd">
+                                    <span class="text-warning" style="font-weight: 200;" id="md2"></span>
+                                </div>
+                                <div class="modal-body" style="text-align: left;">
+                                    <label for="Email:" class="col-form-label">Email</label>
+                                    <br>
+                                    <input type="email" name="email" id="emailmd" class="form-control"
+                                        placeholder="Email">
+                                    <span class="text-warning" style="font-weight: 200;" id="md3"></span>
+                                </div>
+                                <div class="modal-body" style="text-align: left;">
+                                    <label for="Message:" class="col-form-label">Suggestion</label>
+                                    <br>
+                                    <textarea class="form-control" id="msgmd"
+                                        placeholder="Write your suggestions here..."></textarea>
+                                    <span class="text-warning" style="font-weight: 200;" id="md4"></span>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn rounded border border-warning font-monospace mdbtn"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <input type="submit" class="btn rounded border border-warning font-monospace mdbtn"
+                                        value="Submit">
+                                    </form>
+                                </div>
+                                <script>
+                                    function modalValidate() {
+                                        var Fname = document.getElementById("fnamemd").value;
+                                        var Lname = document.getElementById("lnamemd").value;
+                                        var Emailmd = document.getElementById("emailmd").value;
+                                        var Msgmd = document.getElementById("msgmd").value;
+
+                                        if (Fname == "") {
+                                            document.getElementById("md1").innerHTML = "Please enter your first name"
+                                            return false;
+                                        }
+                                        if (Fname.length <= 2) {
+                                            document.getElementById("md1").innerHTML = "Name must be more than 2 characters"
+                                            return false;
+                                        }
+                                        if (!isNaN(Fname)) {
+                                            document.getElementById("md1").innerHTML = "Numbers are not allowed in names"
+                                            return false;
+                                        }
+
+                                        if (Lname == "") {
+                                            document.getElementById("md2").innerHTML = "Please enter Last name"
+                                            return false;
+                                        }
+                                        if (Lname.length <= 2) {
+                                            document.getElementById("md2").innerHTML = "Name must be more than 2 characters"
+                                            return false;
+                                        }
+                                        if (!isNaN(Lname)) {
+                                            document.getElementById("md2").innerHTML = "Numbers are not allowed in names"
+                                            return false;
+                                        }
+
+                                        if (Emailmd == "") {
+                                            document.getElementById("md3").innerHTML = "Please enter email"
+                                            return false;
+                                        }
+                                        if (Emailmd.indexOf("@" <= 0)) {
+                                            document.getElementById("md3").innerHTML = "enter email in correct method"
+                                            return false;
+                                        }
+                                        if (Msgmd == "") {
+                                            document.getElementById("md4").innerHTML = "Please enter your message"
+                                            return false;
+                                        }
+                                        if (Msgmd.length <= 20) {
+                                            document.getElementById("md4").innerHTML = "Please enter at least 20 characters"
+                                            return false;
+                                        }
+                                        if (Msgmd.length >= 300) {
+                                            document.getElementById("md4").innerHTML = "Message should not exceed 300 characters"
+                                            return false;
+                                        }
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4" style="color: #f5a425;">Useful Links</h5>
+                    <p>
+                        <a href="index.html" class="text-white text-decoration-none hov">Home</a>
+                    </p>
+                    <p>
+                        <a href="article.html" class="text-white text-decoration-none hov">Articles</a>
+                    </p>
+                </div>
+                <div class="col-md-4 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4" style="color: #f5a425;">Contact</h5>
+                    <p>
+                        <i class="fa-solid fa-house mr-3" style="color: #f5a425; font-size: 20px;"></i>&nbsp;&nbsp;North
+                        Nazimabad, 74600
+                        PAK
+                    </p>
+                    <p>
+                        <a class="text-white text-decoration-none" href="mailto:mohammadanis75786@gmail.com"><i
+                                class="fa-solid fa-envelope mr-3"
+                                style="color: #f5a425; font-size: 20px;"></i>&nbsp;&nbsp;mohammadanis75786@gmail.com</a>
+                    </p>
+                    <p>
+                        <a class="text-white text-decoration-none" href="#"><i class="fa-brands fa-whatsapp-square mr-3"
+                                style="color: #f5a425; font-size: 20px;"></i>&nbsp;&nbsp;+92 324 0211371</a>
+                    </p>
+                    <p>
+                        <a class="text-white text-decoration-none" href="tel:+923458190740"><i
+                                class="fa-solid fa-phone-flip mr-3"
+                                style="color: #f5a425; font-size: 20px;"></i>&nbsp;&nbsp;+92 345 8190740</a>
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between py-4 my-4 border-top">
+                <p>Copyright &copy;2022 | All Rights Reserved by:
+                    <a href="https://aptech-education.com.pk/" target="_blank" style="text-decoration: none;">
+                        <strong style="color: #f5a425;">Aptech</strong>
+                    </a>
+                </p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3">
+                        <a href="https://www.facebook.com/profile.php?id=100050544793923" target="_blank"
+                            class="btn-floating btn-sm" style="font-size: 23px;"><i
+                                class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li class="ms-3">
+                        <a href="https://twitter.com/Mohammad_An33s?t=pl9aUUZBqvkyhNKC0Ov9DA&s=09" target="_blank"
+                            class="btn-floating btn-sm" style="font-size: 23px;"><i
+                                class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li class="ms-3">
+                        <a href="https://www.instagram.com/an33s_here/" target="_blank" class="btn-floating btn-sm"
+                            style="font-size: 23px;"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li class="ms-3">
+                        <a href="https://www.linkedin.com/in/mohammad-anis-858339177" target="_blank"
+                            class="btn-floating btn-sm" style="font-size: 23px;"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                    </li>
+                    <li class="ms-3">
+                        <a href="https://github.com/Anis75786" target="_blank" class="btn-floating btn-sm"
+                            style="font-size: 23px;"><i class="fa-brands fa-github-square"></i></a>
+                    </li>
+                </ul>
+            </div>
+    </footer>
+
+    <!--- mass conversion js ---->
+    <script src="js/mass.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
